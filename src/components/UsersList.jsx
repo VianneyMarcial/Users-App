@@ -1,5 +1,5 @@
 import axios from 'axios';
-
+import cake from '../../cake.svg'
 
 const UsersList = ({usersList, selectUser, deleteUser}) => {
 
@@ -15,10 +15,10 @@ const UsersList = ({usersList, selectUser, deleteUser}) => {
             {user.email}
           </div>
           <div className='inf'>
-            <img src="./cake.svg" alt="" className='iconCake'/>{user.birthday}
+            <img src={cake} alt="" className='iconCake'/>{user.birthday}
           </div>
-          <button onClick={() => selectUser(user)}> <img src="./trash.svg" alt="" className='icons'/>  </button>
-          <button onClick={() => deleteUser(user)}> <img src="./pencil.svg" alt="" className='icons'/> </button>
+          <button onClick={() => selectUser(user)}> <img src={"./trash.svg"} alt="" className='icons'/>  </button>
+          <button onClick={() => deleteUser(user)}> <img src={"./pencil.svg"} alt="" className='icons'/> </button>
         </li>
       ))}
     </ul>
